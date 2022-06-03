@@ -112,7 +112,7 @@ var updateNumbers = function(){
 };
 
 var run = function(){
-    var code = document.getElementById("code").value.replaceAll("\n", "").replaceAll(" ", "");
+    var code = document.getElementById("code").value.replaceAll("\n", "").replaceAll(" ", ""); //Fix spacing in strings
 
     var declarations = [];
     let j = 0;
@@ -170,7 +170,7 @@ window.onload = function(){
         codeChange();
     };
 
-    console.log(Number("123 "));
+    console.log();
 }
 
 /*
