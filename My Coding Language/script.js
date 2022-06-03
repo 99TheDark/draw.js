@@ -69,7 +69,7 @@ var drawJSFunction = function(name, params){
         for(let i = 0; i < function_data.params.length; i++){
             var param_type = typeof(params[i]);
             var cur_param = function_data.params[i];
-            if(!((cur_param === "a") || (cur_param === "n" && param_type === "number") || (cur_param === "s" && param_type === "string") || (cur_param === "b" && param_type === "boolean"))){
+            if(cur_param !== "a" && !(cur_param === "n" && param_type === "number") && !(cur_param === "s" && param_type === "string") && !(cur_param === "b" && param_type === "boolean")){
                 let number_ending = "th";
                 if((i + 1) % 10 === 1 && (i + 1) !== 11){
                     number_ending = "st";
@@ -175,8 +175,8 @@ window.onload = function(){
 
 /*
     ADDED:
-    print()
+    print(text), rect(x1, y1, x2, y2)
 
     NEW:
-    canvas.width, canvas.height, window.width, window.height, loop(){}, repeat(amount){}, rect(x1, y1, x2, y2), ellipse(x, y, w, h), triangle(x1, y1, x2, y2, x3, y3), polygon(x1, y1, x2, y2, x3, y3...), wait(seconds){}, mouseX, mouseY, mouseIn, mouseOut, fill(color), fillGradient(color1, color2, gradientMode), restart()
+    canvas.width, canvas.height, window.width, window.height, loop(){}, repeat(amount){}, ellipse(x, y, w, h), triangle(x1, y1, x2, y2, x3, y3), polygon(x1, y1, x2, y2, x3, y3...), wait(seconds){}, mouseX, mouseY, mouseIn, mouseOut, fill(color), fillGradient(color1, color2, gradientMode), restart()
 */
